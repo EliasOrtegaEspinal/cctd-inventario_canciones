@@ -5,6 +5,7 @@
 
 body {
     background-color: #f5f8fd;
+    min-height: 100%;
 }
 
 a {
@@ -23,15 +24,14 @@ aside {
 }
 
 
+main {
+    padding: 25px 30px 0px 30px;
+}
+
 .main-container {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 0.3fr 1.7fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    ". ."; 
-    min-height: 695.2px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
 }
 
 .logo-cctd {
@@ -45,10 +45,12 @@ aside {
 .navbar {
     display: flex;
     flex-direction: column;
-    gap: 30px;  
+    gap: 30px;
+
     position: sticky;
     top: 0;
-    height: 100vh;  
+    height: 100vh;
+    overflow-y: auto;  
 }
 
 
@@ -62,4 +64,36 @@ aside {
 
 .logo-configuracion {
     margin-top: 260px;
+}
+
+.information-cards, .rapid-access {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid #e7e8ed ;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 8px 15px;
+
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.information-cards, .rapid-access, .changelog {
+    margin-top: 15px;
+}
+
+.changelog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
