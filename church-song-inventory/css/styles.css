@@ -1,39 +1,43 @@
+/* ========================================
+   REINICIO GENERAL
+======================================== */
+
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+
+/* ========================================
+   ESTILOS GENERALES
+======================================== */
+
 body {
-    background-color: #ffffff;
     min-height: 100vh;
+    background-color: #ffffff;
+
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #071260;
 }
 
 a {
+    color: #071260;
     text-decoration: none;
 }
 
 li {
     list-style: none;
-    display: inline-block;
-}
-
-aside {
-    padding: 27px 18px 24px;
-    border-right: 1px solid #e7e8ed;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    position: sticky;
-    top: 0;
-    height: 100vh;
 }
 
 
-main {
-    padding: 34px 58px 46px;
-    background-color: #f5f8fd;
-}
+/* ========================================
+   ESTRUCTURA PRINCIPAL
+======================================== */
 
 .container {
     display: grid;
@@ -41,14 +45,54 @@ main {
     min-height: 100vh;
 }
 
+.sidebar {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    padding: 27px 18px 24px;
+
+    background-color: #ffffff;
+    border-right: 1px solid #e7e8ed;
+}
+
+main {
+    padding: 34px 58px 46px;
+    background-color: #f5f8fd;
+}
+
+
+/* ========================================
+   LOGO PRINCIPAL
+======================================== */
+
+.logo-cctd-holder {
+    margin-bottom: 40px;
+}
+
 .logo-cctd {
+    display: block;
     width: 190px;
 }
 
+
+/* ========================================
+   NAVEGACIÓN
+======================================== */
+
 .navbar {
+    flex: 1;
+}
+
+.navbar-list {
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    height: 100%;
 }
 
 .item-navbar {
@@ -56,36 +100,206 @@ main {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    padding: 0px 25px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0;
 }
 
-.logo-configuracion {
-    margin-top: 260px;
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
 }
 
-.information-cards, .access-cards {
-    margin-top: 15px;
+.configuration-item {
+    margin-top: auto;
+}
+
+
+/* ========================================
+   COMPONENTES
+======================================== */
+
+.item-navbar:link, .item-navbar:visited {
+    padding: 10px 25px;
+    color: #071260;
+}
+
+.item-navbar:hover, .item-navbar:active {
+    transition: .2s;
+    color: #3660cb;
+    border-color: #edf3ff;
+    background-color:#edf3ff ;
+    border-radius: 10px;
+}
+
+.access-card .card-body:link, .access-card .card-body:visited {
+    box-shadow: none;
+}
+.access-card .card-body:hover, .access-card .card-body:active {
+    transform: 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border: 1px solid #e7e8ed;
+    box-shadow: rgba(19, 42, 101, 0.1) 0px 8px 20px 0px;
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.header {
+    margin-bottom: 22px;
+}
+
+.header span {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    color: #52649a;
+
+    text-transform: uppercase;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+    color: #071260;
+}
+
+.header p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #52649a;
+}
+
+
+/* ========================================
+   TARJETAS DE INFORMACIÓN
+======================================== */
+
+.information-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;  
+    column-gap: 10px;
+
+    margin-bottom: 22px;
 }
 
-.cta-section {
+.card-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 20px 28px;
+
+    background-color: #ffffff;
     border: 1px solid #e7e8ed;
     border-radius: 10px;
-    padding: 18px 20px 20px;
-    background-color: #ffffff;
+
     box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
-
-
 }
 
-.header-section, .cta-section {
-    margin-bottom: 15px;
+.summary-icon {
+    width: 70px;
+    height: 70px;
 }
 
+.information-card .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.information-card .info-card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+    color: #071260;
+}
+
+.information-card .info-card span {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.7px;
+    color: #071260;
+}
+
+
+/* ========================================
+   ACCESOS RÁPIDOS
+======================================== */
+
+.cta-section {
+    margin-bottom: 22px;
+    padding: 18px 20px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #e7e8ed;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
+}
+
+.cta-section > h2 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #071260;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.quick-access-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.access-card .info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.access-card .info-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+    color: #071260;
+}
+
+.access-card .info-card p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #52649a;
+}
+
+
+/* ========================================
+   CAMBIOS RECIENTES
+======================================== */
 
 .changelog-cards {
     display: grid;
@@ -93,54 +307,55 @@ main {
     gap: 24px;
 }
 
-.card-body {
-    display: flex;
-    align-items: center;
-    border: 1px solid #e7e8ed;
-    border-radius: 10px;
-    padding: 20px 28px;
-    gap: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
-
-}
-
-
-
-.information-card {
-    min-height: 122px;
-}
-
-.access-card {
-    min-height: 104px;
-}
-
-.access-card > .card-body {
-    box-shadow: none;
-}
-
 .changelog-card {
-    border: 1px solid #e7e8ed;
-    border-radius: 10px;
-    padding: 10px 15px;
     min-height: 385px;
     padding: 20px 22px;
+
     background-color: #ffffff;
+    border: 1px solid #e7e8ed;
+    border-radius: 10px;
+
     box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
-
 }
 
-.info-card {
+.changelog-card > h2 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #071260;
+}
+
+.changelog-card .info-card {
     display: flex;
-    flex-direction: column; 
-}
-
-.changelog-card > .info-card {
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 8px;
-    padding: 20px;
+
     min-height: 300px;
+    padding: 20px;
+
+    text-align: center;
 }
 
+.changelog-icon {
+    width: 85px;
+    height: 85px;
+}
 
+.changelog-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+    color: #071260;
+}
+
+.changelog-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #52649a;
+}
