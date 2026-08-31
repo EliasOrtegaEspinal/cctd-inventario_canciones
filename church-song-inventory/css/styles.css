@@ -1,11 +1,12 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #f5f8fd;
-    min-height: 100%;
+    background-color: #ffffff;
+    min-height: 100vh;
 }
 
 a {
@@ -19,16 +20,22 @@ li {
 
 aside {
     padding: 27px 18px 24px;
-    background-color: #ffffff;
     border-right: 1px solid #e7e8ed;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 
 main {
-    padding: 25px 30px 0px 30px;
+    padding: 34px 58px 46px;
+    background-color: #f5f8fd;
 }
 
-.main-container {
+.container {
     display: grid;
     grid-template-columns: 260px 1fr;
     min-height: 100vh;
@@ -38,21 +45,11 @@ main {
     width: 190px;
 }
 
-.logo-cctd-holder {
-    margin-bottom: 20px;
-}
-
 .navbar {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;  
+    gap: 25px;
 }
-
 
 .item-navbar {
     display: flex;
@@ -66,34 +63,84 @@ main {
     margin-top: 260px;
 }
 
-.information-cards, .rapid-access {
+.information-cards, .access-cards {
+    margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;  
+}
+
+.cta-section {
+    border: 1px solid #e7e8ed;
+    border-radius: 10px;
+    padding: 18px 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
+
+
+}
+
+.header-section, .cta-section {
+    margin-bottom: 15px;
+}
+
+
+.changelog-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.card {
+.card-body {
     display: flex;
     align-items: center;
-    gap: 20px;
-    border: 3px solid #e7e8ed ;
+    border: 1px solid #e7e8ed;
     border-radius: 10px;
+    padding: 20px 28px;
+    gap: 10px;
     background-color: #ffffff;
-    padding: 8px 15px;
+    box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
+
+}
+
+
+
+.information-card {
+    min-height: 122px;
+}
+
+.access-card {
+    min-height: 104px;
+}
+
+.access-card > .card-body {
+    box-shadow: none;
+}
+
+.changelog-card {
+    border: 1px solid #e7e8ed;
+    border-radius: 10px;
+    padding: 10px 15px;
+    min-height: 385px;
+    padding: 20px 22px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(19, 42, 101, 0.06);
 
 }
 
 .info-card {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.information-cards, .rapid-access, .changelog {
-    margin-top: 15px;
+    flex-direction: column; 
 }
 
-.changelog {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+.changelog-card > .info-card {
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    min-height: 300px;
 }
+
+
