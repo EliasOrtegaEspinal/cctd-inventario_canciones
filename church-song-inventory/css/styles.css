@@ -376,3 +376,30 @@ main {
     letter-spacing: 0;
     color: #52649a;
 }
+
+/* ========================================
+   MEDIA QUERIES
+======================================== */
+
+@media (max-width: 68.75rem) {
+    html {
+        font-size: 50%;
+    }
+    /*16px x 50%= 8px*/    
+}
+
+@media (max-width: 48rem) {
+
+    html {
+        font-size: 37.5%;
+    }
+
+}
+
+@media (max-width: 30rem) {
+
+    html {
+        font-size: 25%;
+    }
+
+}
