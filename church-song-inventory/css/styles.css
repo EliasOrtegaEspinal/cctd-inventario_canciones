@@ -100,10 +100,6 @@ main {
    NAVEGACIÓN
 ======================================== */
 
-.navbar {
-    flex: 1;
-}
-
 .navbar-list {
     display: flex;
     flex-direction: column;
@@ -413,95 +409,5 @@ main {
 
     main {
         padding: 2.4rem 3.8rem 2.6rem;
-    }
-}
-
-
-@media (max-width: 48.125rem) {
-
-    html {
-        font-size: 37.5%;
-    }
-
-    .container {
-        display: block;
-        background-color: #f5f8fd;
-    }
-
-    main {
-        max-width: 896px;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .sidebar-icon {
-        margin: 0 auto;
-    }
-
-    .logo-cctd-holder {
-        margin: 0;
-    }
-
-    .logo-cctd {
-        width: 26.0rem;
-        margin: 0 auto;
-    }
-
-
-    .navbar {
-        flex: none;
-    }
-
-    .sidebar {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        gap: 8rem;
-        height: auto;
-        align-items: center;
-        border-bottom: 2px solid #e7e8ed;
-        border-right: none;
-        margin-bottom: 4rem;
-        padding: 2rem;
-
-    }
-
-    .navbar-list {
-        flex-direction: row;
-        justify-content: space-between;
-
-        gap: 7rem;
-    }
-
-    .item-navbar {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .header h1 {
-        margin-bottom: 0.6rem;
-    }
-
-    .information-section,
-    .cta-section,
-    .changelog-section {
-        margin-top: 2.0rem;
-    }
-}
-
-@media (max-width: 40rem) {
-    .sidebar {
-        gap: 2.5rem; /* más chico que el de arriba */
-        padding: 1.5rem 2rem;
-    }
-}
-
-
-@media (max-width: 30rem) {
-
-    html {
-        font-size: 25%;
     }
 }
