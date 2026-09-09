@@ -97,8 +97,25 @@ main {
 
 
 /* ========================================
+   MENU HAMBURGUESA
+======================================== */
+
+.sidebar-header {
+    display: contents;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* ========================================
    NAVEGACIÓN
 ======================================== */
+
+.navbar {
+    flex: 1;
+}
 
 .navbar-list {
     display: flex;
@@ -120,18 +137,15 @@ main {
     line-height: 1.2;
     letter-spacing: 0;
 
-    transition: color 0.2s, 
-                border-color 0.2s, 
-                background-color 0.2s;
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        background-color 0.2s;
 }
 
 .sidebar-icon {
     width: 3.0rem;
     height: 3.0rem;
-}
-
-.configuration-item {
-    margin-top: auto;
 }
 
 
@@ -153,8 +167,9 @@ main {
 }
 
 .access-card .card-body {
-    transition: border-color 0.2s, 
-                box-shadow 0.2s;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
 }
 
 .access-card .card-body:link,
@@ -307,7 +322,6 @@ main {
     flex-shrink: 0;
 }
 
-
 .access-card .info-card {
     display: flex;
     flex-direction: column;
@@ -326,6 +340,7 @@ main {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.4;
+    letter-spacing: 0;
     color: #52649a;
 }
 
@@ -395,7 +410,7 @@ main {
 
 
 /* ========================================
-   MEDIA QUERIES
+   MEDIA QUERY - 1100px
 ======================================== */
 
 @media (max-width: 68.75rem) {
@@ -406,8 +421,398 @@ main {
 
     /* 16px x 50% = 8px */
 
+    .card-body {
+        padding: 1.2rem;
+        gap: 0.75rem;
+    }
 
     main {
         padding: 2.4rem 3.8rem 2.6rem;
+    }
+}
+
+
+/* ========================================
+   MEDIA QUERY - 768px
+======================================== */
+
+@media (max-width: 48.125rem) {
+
+    html {
+        font-size: 37.5%;
+    }
+
+    /* 16px x 37.5% = 6px */
+
+    .container {
+        display: block;
+        background-color: #f5f8fd;
+    }
+
+    main {
+        width: 90%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 100%;
+
+        align-items: center;
+
+        gap: 5.0rem;
+
+        margin-bottom: 4.0rem;
+
+        padding: 1rem 1rem;
+
+        border-right: none;
+        border-bottom: 2px solid #e7e8ed;
+
+        height: auto;
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        flex: 1;
+    }
+
+    .navbar-list {
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 6.0rem;
+        height: auto;
+    }
+
+    .logo-cctd-holder {
+        margin-bottom: 0;
+    }
+
+    .logo-cctd {
+        width: 26.0rem;
+    }
+
+    .item-navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar-icon {
+        width: 3.0rem;
+        height: 3.0rem;
+
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    /* La hamburguesa NO aparece a 768px */
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .header h1 {
+        margin-bottom: 0.6rem;
+    }
+
+    .information-section,
+    .cta-section,
+    .changelog-section {
+        margin-top: 2.0rem;
+    }
+}
+
+
+/* ========================================
+   MEDIA QUERY - 480px
+======================================== */
+
+@media (max-width: 30rem) {
+
+    html {
+        font-size: 31.25%;
+    }
+
+    /* 16px x 31.25% = 5px */
+
+    .container {
+        display: block;
+
+        width: 100%;
+        max-width: 480px;
+
+        margin: 0 auto;
+
+        background-color: #f5f8fd;
+    }
+
+    main {
+        width: 100%;
+        max-width: 480px;
+
+        margin: 0 auto;
+
+        padding: 0 2.4rem 3.0rem;
+    }
+
+
+    /* ====================================
+       SIDEBAR
+    ==================================== */
+
+    .sidebar {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: auto;
+
+        gap: 0;
+
+        padding: 1.2rem;
+
+        margin-bottom: 2.5rem;
+
+        border-right: none;
+        border-bottom: 2px solid #e7e8ed;
+    }
+
+
+    /* ====================================
+       HEADER DEL SIDEBAR
+    ==================================== */
+
+    .sidebar-header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    .logo-cctd-holder {
+        margin-bottom: 0;
+    }
+
+    .logo-cctd {
+        width: 20rem;
+    }
+
+
+    /* ====================================
+       OCULTAR NAVBAR
+    ==================================== */
+
+    .navbar {
+        display: none;
+        width: 100%;
+    }
+
+
+    /* ====================================
+       BOTÓN HAMBURGUESA
+    ==================================== */
+
+    .menu-toggle {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 5rem;
+        height: 5rem;
+
+        padding: 0;
+
+        border: none;
+
+        background-color: transparent;
+
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 3.5rem;
+        height: 0.4rem;
+
+        margin: 0.35rem 0;
+
+        background-color: #071260;
+
+        border-radius: 0.3rem;
+    }
+
+
+    /* ====================================
+       NAVBAR ABIERTO
+    ==================================== */
+
+    .sidebar.menu-open .navbar {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar.menu-open .navbar-list {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        gap: 1.0rem;
+
+        margin-top: 2.0rem;
+    }
+
+    .sidebar.menu-open .item-navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+
+        padding: 1.2rem 2.0rem;
+    }
+
+    .sidebar.menu-open .sidebar-icon {
+        width: 3.0rem;
+        height: 3.0rem;
+
+        padding: 0;
+        margin: 0;
+    }
+
+
+    /* ====================================
+       ENCABEZADO
+    ==================================== */
+
+    .header {
+        margin-bottom: 2.0rem;
+    }
+
+    .header span {
+        font-size: 1.4rem;
+    }
+
+    .header h1 {
+        margin-bottom: 0.6rem;
+
+        font-size: 3.8rem;
+
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .header p {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+
+
+    /* ====================================
+       TARJETAS DE INFORMACIÓN
+    ==================================== */
+
+    .information-section {
+        grid-template-columns: 1fr;
+
+        gap: 1.0rem;
+
+        margin-bottom: 2.0rem;
+    }
+
+    .card-body {
+        padding: 1.5rem 2.0rem;
+    }
+
+    .summary-icon {
+        width: 6.0rem;
+        height: 6.0rem;
+    }
+
+
+    /* ====================================
+       ACCESOS RÁPIDOS
+    ==================================== */
+
+    .cta-section {
+        margin-bottom: 2.0rem;
+
+        padding: 1.8rem 1.5rem 2.0rem;
+    }
+
+    .cta-section > h2 {
+        font-size: 2.1rem;
+    }
+
+    .cta-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.0rem;
+
+        margin-top: 1.5rem;
+    }
+
+    .access-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .quick-access-icon {
+        width: 6.0rem;
+        height: 6.0rem;
+    }
+
+
+    /* ====================================
+       CAMBIOS RECIENTES
+    ==================================== */
+
+    .changelog-cards {
+        grid-template-columns: 1fr;
+
+        gap: 1.0rem;
+    }
+
+    .changelog-card {
+        min-height: 32.0rem;
+
+        padding: 1.8rem;
+    }
+
+    .changelog-card > h2 {
+        font-size: 2.1rem;
+    }
+
+    .changelog-card .info-card {
+        min-height: 25.0rem;
+
+        padding: 1.5rem;
+    }
+
+    .changelog-icon {
+        width: 7.0rem;
+        height: 7.0rem;
     }
 }

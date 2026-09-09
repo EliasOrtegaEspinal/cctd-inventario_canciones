@@ -1,221 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CCTD - Inventario de Canciones</title>
+
     <link
-        rel="shortcut icon"
-        href="assets/images/favicon.png"
-        type="image/x-icon"
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet"
-    >
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <aside class="sidebar">
-            <div class="logo-cctd-holder">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo-cctd-holder">
+            <img
+              src="assets/images/Logo main page.png"
+              alt="Centro Cristiano Tabernáculo de David"
+              class="logo-cctd"
+            />
+          </div>
+
+          <button class="menu-toggle" type="button" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="item-navbar">
                 <img
-                    src="assets/images/Logo main page.png"
-                    alt="Centro Cristiano Tabernáculo de David"
-                    class="logo-cctd"
-                >
+                  src="assets/icons/inicio.svg"
+                  alt=""
+                  class="sidebar-icon"
+                />
+                Inicio
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-navbar">
+                <img
+                  src="assets/icons/canciones.svg"
+                  alt=""
+                  class="sidebar-icon"
+                />
+                Canciones
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-navbar">
+                <img
+                  src="assets/icons/cantantes.svg"
+                  alt=""
+                  class="sidebar-icon"
+                />
+                Cantantes
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="item-navbar">
+                <img
+                  src="assets/icons/asignaciones.svg"
+                  alt=""
+                  class="sidebar-icon"
+                />
+                Asignaciones
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <header class="header">
+          <span>Ministerio de Alabanza</span>
+
+          <h1>¡Bienvenido al repertorio!</h1>
+
+          <p>Organiza las canciones, cantantes y tonos de la iglesia.</p>
+        </header>
+
+        <section class="information-section" aria-label="Información general">
+          <article class="card-body information-card">
+            <img
+              src="assets/icons/total-canciones.svg"
+              alt=""
+              class="summary-icon"
+            />
+
+            <div class="info-card">
+              <h2>Canciones</h2>
+              <span>0</span>
             </div>
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li>
-                        <a href="index.html" class="item-navbar">
-                            <img
-                                src="assets/icons/inicio.svg"
-                                alt=""
-                                class="sidebar-icon"
-                            >
-                            Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-navbar">
-                            <img
-                                src="assets/icons/canciones.svg"
-                                alt=""
-                                class="sidebar-icon"
-                            >
-                            Canciones
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-navbar">
-                            <img
-                                src="assets/icons/cantantes.svg"
-                                alt=""
-                                class="sidebar-icon"
-                            >
-                            Cantantes
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-navbar">
-                            <img
-                                src="assets/icons/asignaciones.svg"
-                                alt=""
-                                class="sidebar-icon"
-                            >
-                            Asignaciones
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+          </article>
 
-        <main>
-            <header class="header">
-                <span>Ministerio de Alabanza</span>
-                <h1>¡Bienvenido al repertorio!</h1>
-                <p>
-                    Organiza las canciones, cantantes y tonos de la iglesia.
+          <article class="card-body information-card">
+            <img
+              src="assets/icons/total-cantantes.svg"
+              alt=""
+              class="summary-icon"
+            />
+
+            <div class="info-card">
+              <h2>Cantantes</h2>
+              <span>0</span>
+            </div>
+          </article>
+
+          <article class="card-body information-card">
+            <img
+              src="assets/icons/total-asignaciones.svg"
+              alt=""
+              class="summary-icon"
+            />
+
+            <div class="info-card">
+              <h2>Asignaciones</h2>
+              <span>0</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="cta-section">
+          <h2>Accesos rápidos</h2>
+
+          <div class="cta-grid">
+            <article class="access-card">
+              <a href="#" class="card-body">
+                <img
+                  src="assets/icons/canciones.svg"
+                  alt=""
+                  class="quick-access-icon"
+                />
+
+                <div class="info-card">
+                  <h3>Agregar canción</h3>
+                  <p>Registra una canción y su enlace</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="access-card">
+              <a href="#" class="card-body">
+                <img
+                  src="assets/icons/cantantes.svg"
+                  alt=""
+                  class="quick-access-icon"
+                />
+
+                <div class="info-card">
+                  <h3>Agregar cantante</h3>
+                  <p>Añade una nueva voz al equipo</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="access-card">
+              <a href="#" class="card-body">
+                <img
+                  src="assets/icons/asignaciones.svg"
+                  alt=""
+                  class="quick-access-icon"
+                />
+
+                <div class="info-card">
+                  <h3>Crear asignación</h3>
+                  <p>Asigna cantante y tono</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="changelog-section">
+          <div class="changelog-cards">
+            <article class="changelog-card">
+              <h2>Canciones recientes</h2>
+
+              <div class="info-card">
+                <img
+                  src="assets/icons/canciones.svg"
+                  alt=""
+                  class="changelog-icon"
+                />
+
+                <p class="changelog-title">Aún no hay canciones</p>
+
+                <p class="changelog-description">
+                  Agrega tu primera canción para comenzar.
                 </p>
-            </header>
+              </div>
+            </article>
 
-            <section
-                class="information-section"
-                aria-label="Información general"
-            >
-                <article class="card-body information-card">
-                    <img
-                        src="assets/icons/total-canciones.svg"
-                        alt=""
-                        class="summary-icon"
-                    >
-                    <div class="info-card">
-                        <h2>Canciones</h2>
-                        <span>0</span>
-                    </div>
-                </article>
+            <article class="changelog-card">
+              <h2>Pendientes de asignación</h2>
 
-                <article class="card-body information-card">
-                    <img
-                        src="assets/icons/total-cantantes.svg"
-                        alt=""
-                        class="summary-icon"
-                    >
-                    <div class="info-card">
-                        <h2>Cantantes</h2>
-                        <span>0</span>
-                    </div>
-                </article>
+              <div class="info-card">
+                <img
+                  src="assets/icons/asignaciones.svg"
+                  alt=""
+                  class="changelog-icon"
+                />
 
-                <article class="card-body information-card">
-                    <img
-                        src="assets/icons/total-asignaciones.svg"
-                        alt=""
-                        class="summary-icon"
-                    >
-                    <div class="info-card">
-                        <h2>Asignaciones</h2>
-                        <span>0</span>
-                    </div>
-                </article>
-            </section>
+                <p class="changelog-title">No hay asignaciones pendientes</p>
 
-            <section class="cta-section">
-                <h2>Accesos rápidos</h2>
-                <div class="cta-grid">
-                    <article class="access-card">
-                        <a href="#" class="card-body">
-                            <img
-                                src="assets/icons/canciones.svg"
-                                alt=""
-                                class="quick-access-icon"
-                            >
-                            <div class="info-card">
-                                <h3>Agregar canción</h3>
-                                <p>Registra una canción y su enlace</p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="access-card">
-                        <a href="#" class="card-body">
-                            <img
-                                src="assets/icons/cantantes.svg"
-                                alt=""
-                                class="quick-access-icon"
-                            >
-                            <div class="info-card">
-                                <h3>Agregar cantante</h3>
-                                <p>Añade una nueva voz al equipo</p>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="access-card">
-                        <a href="#" class="card-body">
-                            <img
-                                src="assets/icons/asignaciones.svg"
-                                alt=""
-                                class="quick-access-icon"
-                            >
-                            <div class="info-card">
-                                <h3>Crear asignación</h3>
-                                <p>Asigna cantante y tono</p>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="changelog-section">
-                <div class="changelog-cards">
-                    <article class="changelog-card">
-                        <h2>Canciones recientes</h2>
-                        <div class="info-card">
-                            <img
-                                src="assets/icons/canciones.svg"
-                                alt=""
-                                class="changelog-icon"
-                            >
-                            <p class="changelog-title">
-                                Aún no hay canciones
-                            </p>
-                            <p class="changelog-description">
-                                Agrega tu primera canción para comenzar.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="changelog-card">
-                        <h2>Pendientes de asignación</h2>
-                        <div class="info-card">
-                            <img
-                                src="assets/icons/asignaciones.svg"
-                                alt=""
-                                class="changelog-icon"
-                            >
-                            <p class="changelog-title">
-                                No hay asignaciones pendientes
-                            </p>
-                            <p class="changelog-description">
-                                Aquí aparecerán las canciones que necesiten
-                                cantante y tono.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </main>
+                <p class="changelog-description">
+                  Aquí aparecerán las canciones que necesiten cantante y tono.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
-</body>
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("menu-open");
+        });
+    </script>
+  </body>
 </html>
